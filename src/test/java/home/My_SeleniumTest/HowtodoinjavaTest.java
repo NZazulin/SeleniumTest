@@ -37,7 +37,7 @@ public class HowtodoinjavaTest {
     }
 
     @Test
-    void yandexAlternative() {
+    void howtodoinjava() {
 
         //1. Зайти на страницу howtodoinjava.com
         driver.get("https://howtodoinjava.com/");
