@@ -1,9 +1,6 @@
 package home.My_SeleniumTest;
 
-import org.junit.jupiter.api.AfterAll;
-import org.junit.jupiter.api.Assertions;
-import org.junit.jupiter.api.BeforeAll;
-import org.junit.jupiter.api.Test;
+import org.junit.jupiter.api.*;
 import org.openqa.selenium.By;
 import org.openqa.selenium.StaleElementReferenceException;
 import org.openqa.selenium.WebDriver;
@@ -37,12 +34,13 @@ public class HowtodoinjavaTest {
     }
 
     @Test
+    @DisplayName("Проверка навигации на сайте howtodoinjava.com")
     void howtodoinjava() {
 
         //1. Зайти на страницу howtodoinjava.com
         driver.get("https://howtodoinjava.com/");
         Assertions.assertTrue(driver.getCurrentUrl().startsWith("https://howtodoinjava.com/"), "URL не соответсвует howtodoinjava");
-        //2. Найти секцию с уроками Java Coredsfsdf
+        //2. Найти секцию с уроками Java Cored
         String parentCore = "//table//h4[text()='Core Java']/parent::td/ol/li/a";
 
         List<WebElement> javaCoreElements = wait.until(ExpectedConditions.presenceOfAllElementsLocatedBy(By.xpath(parentCore)));
